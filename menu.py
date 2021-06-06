@@ -164,7 +164,7 @@ def main():
     compet_chargee = load_competition()
     system("clear")
     while (main_choix!=6):
-        print("")
+        print("--- ~ A FOND LA FORME ~ ---")
         print("Compétition chargée : " +compet_chargee.nom+ " (à " +compet_chargee.lieu+ ")")
         print("Que voulez-vous faire ?")
 
