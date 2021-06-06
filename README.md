@@ -1,4 +1,4 @@
-# A fond la forme tul
+# A fond la forme
 
 ![Screenshot du programme](.github/images/screenshot.png)
 
