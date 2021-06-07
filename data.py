@@ -46,32 +46,150 @@ p_nowak = (
     266.80          # 1500 m
 )
 
- 
-deca_tn = Decathlon(p_nowak, Participant("Nowak", "Tim", 1, "GER"))
-deca_aa = Decathlon(p_abele, Participant("Abele", "Arthur", 1, "GER"))
-deca_km = Decathlon(p_mayer, Participant("Mayer", "Kévin", 1, "FRA"))
+p_braun = (
+    11.17,          # 100m
+    7.29,            # Longueur
+    14.37,          # Poids
+    2.02,            # Hauteur
+    49.09,          # 400m
+    14.61,          # 110m Haies
+    46.51,          # Disque
+    4.45,            # Perche
+    56.51,          # Javelot
+    276.39          # 1500 m
+)
 
 decastart = Competition("Décastart-Décathlon", "Talence")
-decastart.add_participation(deca_tn)
-decastart.add_participation(deca_km)
-decastart.add_participation(deca_aa)
+decastart.add_participation(Decathlon(p_nowak, Participant("Nowak", "Tim", 1, "GER")))
+decastart.add_participation(Decathlon(p_mayer, Participant("Mayer", "Kévin", 1, "FRA")))
+decastart.add_participation(Decathlon(p_abele, Participant("Abele", "Arthur", 1, "GER")))
+decastart.add_participation(Decathlon(p_braun, Participant("Braun", "Pieter", 1, "NED")))
 save = Fichier(os.path.join(os.getcwd(), "storage"))
 save.sauvegarder(decastart,decastart.nom)
 
 
 p_thiam = (
     13.56,          # 100m Haies
-    1.98,            # Hauteur
+    1.98,           # Hauteur
     14.91,          # Poids
     25.10,          # 200m
-    6.58,          # Longueur
+    6.58,           # Longueur
     53.13,          # Javelot
     136.54          # 800 m
 )
 
+p_ennis_hill = (
+    12.84,          # 100m Haies
+    1.89,           # Hauteur
+    13.86,          # Poids
+    23.49,          # 200m
+    6.34,           # Longueur
+    46.06,          # Javelot
+    129.07          # 800 m
+)
 
+p_theisen_eaton = (
+    13.18,          # 100m Haies
+    1.86,           # Hauteur
+    13.45,          # Poids
+    24.18,          # 200m
+    6.48,           # Longueur
+    47.36,          # Javelot
+    129.50          # 800 m
+)
 
-hepta_nt = Heptathlon(p_thiam, Participant("Thiam", "Nafissatou", 0, "BEL"))
-hepta = Competition("Jeux Olympiques-Heptathlon", "Rio")
-hepta.add_participation(hepta_nt)
+p_ikauniece = (
+    13.33,          # 100m Haies
+    1.77,           # Hauteur
+    13.52,          # Poids
+    23.76,          # 200m
+    6.12,           # Longueur
+    55.93,          # Javelot
+    129.43          # 800 m
+)
+
+p_schafer = (
+    13.12,          # 100m Haies
+    1.83,           # Hauteur
+    14.57,          # Poids
+    23.99,          # 200m
+    6.20,           # Longueur
+    47.99,          # Javelot
+    136.52          # 800 m
+)
+
+p_johnson_thompson = (
+    13.48,          # 100m Haies
+    1.98,           # Hauteur
+    11.68,          # Poids
+    23.26,          # 200m
+    6.51,           # Longueur
+    36.36,          # Javelot
+    130.47          # 800 m
+)
+
+p_rodriguez = (
+    13.61,          # 100m Haies
+    1.86,           # Hauteur
+    13.69,          # Poids
+    24.26,          # 200m
+    6.25,           # Longueur
+    48.89,          # Javelot
+    134.65          # 800 m
+)
+
+p_farkas = (
+    13.79,          # 100m Haies
+    1.86,           # Hauteur
+    14.39,          # Poids
+    25.38,          # 200m
+    6.31,           # Longueur
+    48.07,          # Javelot
+    131.76          # 800 m
+)
+
+p_oeser = (
+    13.69,          # 100m Haies
+    1.86,           # Hauteur
+    14.28,          # Poids
+    24.99,          # 200m
+    6.19,           # Longueur
+    47.22,          # Javelot
+    133.82          # 800 m
+)
+
+p_vetter = (
+    13.47,          # 100m Haies
+    1.77,           # Hauteur
+    14.78,          # Poids
+    23.93,          # 200m
+    6.10,           # Longueur
+    48.42,          # Javelot
+    137.71          # 800 m
+)
+
+p_nana_djimou = (
+    13.37,          # 100m Haies
+    1.77,           # Hauteur
+    14.88,          # Poids
+    25.07,          # 200m
+    6.43,           # Longueur
+    48.76,          # Javelot
+    140.36          # 800 m
+)
+
+hepta = Competition("Jeux Olympiques-Heptathlon", "Rio de Janeiro")
+hepta.add_participation(Heptathlon(p_thiam, Participant("Thiam", "Nafissatou", 0, "BEL")))
+hepta.add_participation(Heptathlon(p_ennis_hill, Participant("Ennis-Hill", "Jessica", 0, "GBR")))
+hepta.add_participation(Heptathlon(p_theisen_eaton, Participant("Theisen-Eaton", "Brianne", 0, "CAN")))
+hepta.add_participation(Heptathlon(p_ikauniece, Participant("Ikauniece", "Laura", 0, "LAT")))
+hepta.add_participation(Heptathlon(p_schafer, Participant("Schäfer", "Carolin", 0, "GER")))
+hepta.add_participation(Heptathlon(p_johnson_thompson, Participant("Johnson-Thompson", "Katarina", 0, "GBR")))
+hepta.add_participation(Heptathlon(p_rodriguez, Participant("Rodríguez", "Yorgelis", 0, "CUB")))
+hepta.add_participation(Heptathlon(p_farkas, Participant("Zsivoczky-Farkas", "Györgyi", 0, "HUN")))
+hepta.add_participation(Heptathlon(p_oeser, Participant("Oeser", "Jennifer", 0, "HUN")))
+hepta.add_participation(Heptathlon(p_vetter, Participant("Vetter", "Anouk", 0, "NED")))
+hepta.add_participation(Heptathlon(p_nana_djimou, Participant("Nana Djimou", "Antoinnette", 0, "FRA")))
 save.sauvegarder(hepta, hepta.nom)
+
+print("Fichiers d'exemple générés !")
