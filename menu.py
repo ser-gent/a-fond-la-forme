@@ -22,7 +22,7 @@ def ajouter_perfomances(compet_chargee):
         nom_epreuves = [
             "1OOm (s)",
             "Longueur (m)",
-            "Poids (m)"
+            "Poids (m)",
             "Hauteur (m)",
             "400m (s)",
             "11O H (s)",
@@ -36,7 +36,7 @@ def ajouter_perfomances(compet_chargee):
         nom_epreuves = [
             "1OOm H(s)",
             "Hauteur (m)",
-            "Poids (m)"
+            "Poids (m)",
             "200m (s)",
             "Longueur (m)",
             "Javelot (m)",
