@@ -23,7 +23,13 @@ mkdir storage
 python data.py
 ```
 
+## Formatage
+Formatage des fichiers avec *[Black](https://pypi.org/project/black/)*
+```
+black {fichier.py}
+```
+
 ## Modules utilisés
 - [prettytable](https://pypi.org/project/prettytable/) par Luke Maurits
 - [simple-term-menu](https://pypi.org/project/simple-term-menu/) par Ingo Meyer
-- [wcwidth](https://pypi.org/project/wcwidth/) par Jeff Quast
+- [Black](https://pypi.org/project/black/) par Łukasz Langa
