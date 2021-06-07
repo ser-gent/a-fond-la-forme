@@ -2,6 +2,7 @@ class Epreuve:
     """
     Classe mère représentant les épreuves des combinées
     """
+
     def __init__(self, nom, unite) -> None:
         """
         Constructeur
@@ -20,4 +21,4 @@ class Epreuve:
         Returns:
             str: détails de l'épreuve
         """
-        return self.nom+"("+self.unite+")"
+        return self.nom + "(" + self.unite + ")"
