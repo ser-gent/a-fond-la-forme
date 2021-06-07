@@ -7,6 +7,33 @@ Projet permettant de gérer une compétition d'épreuves combinnées outdoor. Le
 - Décathlon (10 épreuves)
 - Heptathlon (7 épreuves)
 
+Les performances de chaques épreuves sont convertit en points avec un barème établi par World Athletics ([Tables de Cotation de l’IAAF pour les Epreuves Combinées](https://www.worldathletics.org/about-iaaf/documents/technical-information)). Le participant qui a le plus gros total remporte la compétition. Les
+
+## Décathlon
+Le décathlon est une épreuve combinée d'athlétisme se disputant à l'extérieur réalisé par les hommes (en compétition officielle). Les 1O épreuves doivent se dérouler selon le schéma suivant :
+
+|Premier jour|Deuxième jour|
+| :---: | :---: |
+|100m|110m Haies|
+|Saut en longueur|Lancer du disque|
+|Lancer du poids|Saut à la perche|
+|Saut en hauteur|Lancer du javelot|
+|400m|1500m|
+
+Le record du monde actuel est détenu par le français [Kévin Mayer](https://fr.wikipedia.org/wiki/Kevin_Mayer) avec 9125 points, effectué au Décastart à Talence(France) en 2018.
+
+## Heptathlon
+L'heptathlon est une épreuve combinée d'athlétisme se disputant à l'extérieur réalisé par les femmes (en compétition officielle). A noter que l'heptathlon est disputé par les hommes mais en salle. Les 8 épreuves doivent se dérouler selon le schéma suivant :
+
+|Premier jour|Deuxième jour|
+| :---: | :---: |
+|100m Haies|Saut en longueur|
+|Saut en hauteur|Lancer du javelot|
+|Lancer du poids|800m|
+|200m||
+
+Le record du monde actuel est détenu par le français [Jackie Joyner-Kersee](hhttps://fr.wikipedia.org/wiki/Jackie_Joyner-Kersee) avec 7 291 points, lors des Jeux Olympiques de Séoul en 1988 (ndlr : Des soupçons de dopage sont liés à ce record).
+
 ## Configuration requise
 - Sytème de la famille UNIX (Windows non supporté)
 - [Python 3.9](https://www.python.org/downloads/) minimun
