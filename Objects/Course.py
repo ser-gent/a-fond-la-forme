@@ -4,9 +4,9 @@ import math
 class Course(Epreuve):
     def __init__(self, distance, chrono, haies,genre):
         if (haies):
-            super(Course,self).__init__(str(distance)+"m", "s")
-        else:
             super(Course,self).__init__(str(distance)+"mH", "s")
+        else:
+            super(Course,self).__init__(str(distance)+"m", "s")
         self.distance = int(distance)
         self.perf = float(chrono)
         self.haies = haies
