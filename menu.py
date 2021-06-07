@@ -154,7 +154,7 @@ def details(compet_chargee):
         for epreuve in range(len(compet_chargee.combined_event[athlete].perfs)):
             resultats_athlete.add_row([
                 compet_chargee.combined_event[athlete].perfs[epreuve].nom,
-                compet_chargee.combined_event[athlete].perfs[epreuve].perf+" "+compet_chargee.combined_event[athlete].perfs[epreuve].unite,
+                str(compet_chargee.combined_event[athlete].perfs[epreuve].perf)+" "+compet_chargee.combined_event[athlete].perfs[epreuve].unite,
                 compet_chargee.combined_event[athlete].perfs[epreuve].score
             ])
         print(resultats_athlete)
