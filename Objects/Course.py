@@ -4,6 +4,15 @@ import math
 
 class Course(Epreuve):
     def __init__(self, distance, chrono, haies, genre):
+        """
+        Constructeur
+
+        Args:
+            distance (integer | string): distance de la course en mètre
+            chrono (float | string): temps effectué en seconde
+            haies (boolean): Course à haies
+            genre (integer): 0 si femme, 1 si homme
+        """
         if haies:
             super(Course, self).__init__(str(distance) + "mH", "s")
         else:
@@ -14,6 +23,15 @@ class Course(Epreuve):
         self.score = self.calculerPoint(genre)
 
     def calculerPoint(self, genre):
+        """
+        Calculer les points associé à l'épreuve
+
+        Args:
+            genre (integer): sexe d l'ahlète
+
+        Returns:
+            float: nombre de points
+        """
         if genre == 1:
             if self.haies == False:
                 CourseIndex_H = {
@@ -49,6 +67,9 @@ class Course(Epreuve):
         return math.floor(P)
 
     def details(self):
+        """
+        Affiche les détails de l'épreuve
+        """
         print("----------------")
         if self.haies:
             print("Epreuve :" + str(self.distance) + "m haies")

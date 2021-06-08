@@ -3,19 +3,37 @@ from prettytable import PrettyTable
 
 class Competition:
     def __init__(self, nom, lieu) -> None:
+        """
+        Constructeur
+
+        Args:
+            nom (string): Nom de la compétition
+            lieu (string): Lieu de la compétition
+        """
         self.nom = nom
         self.lieu = lieu
         self.combined_event = []
 
     def add_participation(self, combined_event) -> None:
+        """
+        Ajouter les décathlon/heptathlon d'un participant à la compétition
+
+        Args:
+            combined_event (Decathlon | Heptathlon): Epreuves combinées d'un athlète
+        """
         self.combined_event.append(combined_event)
         self.classer()
 
     def classer(self) -> None:
-        # https://www.agnosticdev.com/content/how-sort-objects-custom-property-python
+        """
+        Classer les participants dans l'ordre (total le plus grand en premier)
+        """
         self.combined_event.sort(key=lambda ce: ce.score_total, reverse=True)
 
     def recap(self) -> None:
+        """
+        Affiche le récapitulatif de la compétition
+        """
         print("")
         print("COMPETITION : " + self.nom)
         if len(self.combined_event) > 0:

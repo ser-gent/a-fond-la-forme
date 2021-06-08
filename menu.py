@@ -11,6 +11,12 @@ from Objects.Participant import Participant
 
 
 def ajouter_perfomances(compet_chargee):
+    """
+    Interface permettant d'ajouter des participations à une compétition
+
+    Args:
+        compet_chargee (Competition): compétition dans laquelle on ajoute la performance de l'athlète
+    """
     nom_athlete = input("Nom de l'athlète : ")
     prenom_athlete = input("Prénom de l'athlète : ")
     sexe_athlete_menu = TerminalMenu(["Femme 🚺", "Homme 🚹"])
@@ -73,6 +79,12 @@ def ajouter_perfomances(compet_chargee):
 
 
 def load_competition():
+    """
+    Charge une compétition du répertoire de sauvegarde
+
+    Returns:
+        Competition: compétition chargée
+    """
     fichiers = Fichier(os.path.join(os.getcwd(), "storage"))
     compet = fichiers.explorer()
     print("Quelle compétition voulez-vous charger ?")
@@ -82,6 +94,9 @@ def load_competition():
 
 
 def new_competition():
+    """
+    Création d'une nouvelle compétition
+    """
     nom_competition = input("Nom de la compétition : ")
     lieu_competition = input("Lieu de la compétition : ")
     print("Type d'épreuve ?")
@@ -92,11 +107,17 @@ def new_competition():
         (nom_competition + "-" + liste_type_competition[choix_type_competition]),
         lieu_competition,
     )
-    save_competition(nouvelle_competition)
     print("Compétition ajoutée avec succée : pensez à la charger")
+    save_competition(nouvelle_competition)
 
 
 def save_competition(competition_a_sauvegarder):
+    """
+    Interface pour sauvegarder une compétition sous forme de fichier dans le répertoire de sauvegarde
+
+    Args:
+        competition_a_sauvegarder (Compétition): compétition que l'on veut sauvegarder
+    """
     print("Voulez-vous sauvegarder la compétition ?")
     confirmation_save = TerminalMenu(["OUI", "NON"])
     choix_confirmation = confirmation_save.show()
@@ -110,6 +131,12 @@ def save_competition(competition_a_sauvegarder):
 
 
 def details(compet_chargee):
+    """
+    Affiche les détails en fonction d'un athlète ou d'une épreuve
+
+    Args:
+        compet_chargee (Competition): compétition dont on veut voir les détails
+    """
     print("Rechercher par :")
     select_field = TerminalMenu(["Epreuves", "Athlete"])
     field = select_field.show()
@@ -175,6 +202,9 @@ def details(compet_chargee):
 
 
 def main():
+    """
+    Fonction principale
+    """
     main_choix = None
     compet_chargee = load_competition()
     system("clear")

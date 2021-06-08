@@ -5,7 +5,7 @@ from Objects.Decathlon import Decathlon
 from Objects.Participant import Participant
 from Objects.Heptathlon import Heptathlon
 
-
+# ------------------ DECASTART 2018 ------------------
 p_mayer = (
     10.55,  # 100m
     7.80,  # Longueur
@@ -70,7 +70,7 @@ decastart.add_participation(
 save = Fichier(os.path.join(os.getcwd(), "storage"))
 save.sauvegarder(decastart, decastart.nom)
 
-
+# ------------------ Hepta JO 2016 ------------------
 p_thiam = (
     13.56,  # 100m Haies
     1.98,  # Hauteur

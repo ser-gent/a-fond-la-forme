@@ -3,16 +3,29 @@ from .Epreuve import Epreuve
 
 
 class Lancer(Epreuve):
-
-    # Constructeur
     def __init__(self, nom, mesure, genre) -> None:
-        # super(Lancer, self).__init__(nom, "m")
+        """
+        Constructeur
+
+        Args:
+            nom (string): nom du lancer
+            mesure (integer | string): performance réalisé par l'athlère
+            genre (integer): 0 si femme, 1 si homme
+        """
         super().__init__(nom, "m")
         self.perf = float(mesure)
         self.score = self.calculer_points(genre)
 
-    # Calcul des points
     def calculer_points(self, genre):
+        """
+        Calculer les points associé à l'épreuve
+
+        Args:
+            genre (integer): sexe d l'ahlète
+
+        Returns:
+            float: nombre de points
+        """
         if genre == 1:
             index_lancer = {
                 #              a    b      c
@@ -32,8 +45,10 @@ class Lancer(Epreuve):
         P = a * (self.perf - b) ** c
         return math.floor(P)
 
-    # Affiche les détails de l'épreuve
     def details(self) -> None:
+        """
+        Affiche les détails de l'épreuve
+        """
         print(
             self.nom
             + " -> "

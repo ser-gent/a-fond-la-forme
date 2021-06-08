@@ -4,17 +4,41 @@ import math
 
 class Saut(Epreuve):
     def __init__(self, saut, mesure, genre):
+        """
+        Constructeur
+
+        Args:
+            saut (string): nom du saut
+            mesure ([type]): [description]
+            genre (integer): 0 si femme, 1 si homme
+        """
         super(Saut, self).__init__(saut, "cm")
         self.nom = saut
         self.perf = self.conversion(mesure)
         self.score = self.calculerPoint(genre)
 
-    # Convertir de m en cm
     def conversion(self, mesure):
+        """
+        Convertit les distances en mètre en centimètre (suivant les réglès de World Athletics)
+
+        Args:
+            mesure (float): distance en m
+
+        Returns:
+            float: distance en cm
+        """
         return round(mesure * 100, 2)
 
-    # Calcul des points
     def calculerPoint(self, genre):
+        """
+        Calculer les points associé à l'épreuve
+
+        Args:
+            genre (integer): sexe d l'ahlète
+
+        Returns:
+            float: nombre de points
+        """
         if genre == 1:
             SautIndex = {
                 #              a     b     c
@@ -36,6 +60,9 @@ class Saut(Epreuve):
         return math.floor(P)
 
     def details(self):
+        """
+        Affiche les détails de l'épreuve
+        """
         print("----------------")
         print("Type de saut : " + self.nom)
         if self.nom == "Longueur":

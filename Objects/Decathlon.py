@@ -6,6 +6,13 @@ from prettytable import PrettyTable
 
 class Decathlon:
     def __init__(self, perfs, athlete) -> None:
+        """
+        Constructeur
+
+        Args:
+            perfs (tuple): performance de l'ahlète
+            athlete (Participant): athlète
+        """
         self.perfs = (
             Course(100, perfs[0], False, 1),
             Saut("Longueur", perfs[1], 1),
@@ -22,12 +29,21 @@ class Decathlon:
         self.score_total = self.total()
 
     def total(self):
+        """
+        Calcul le total des épreuves du décathlon
+
+        Returns:
+            int: total du décathlon
+        """
         total = 0
         for e in range(len(self.perfs)):
             total = total + self.perfs[e].score
         return total
 
     def details(self) -> None:
+        """
+        Affiche les détails di décathlon
+        """
         print("--- Recap ---")
         print("NOM : " + self.athlete.prenom + " " + self.athlete.nom)
         resultats = PrettyTable()
