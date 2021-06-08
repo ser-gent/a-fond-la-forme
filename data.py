@@ -215,4 +215,4 @@ hepta.add_participation(
 )
 save.sauvegarder(hepta, hepta.nom)
 
-print("Fichiers d'exemple générés !")
+print("Fichiers d'exemple générés ! ✅")
