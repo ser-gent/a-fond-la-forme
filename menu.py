@@ -7,6 +7,7 @@ from simple_term_menu import TerminalMenu
 
 from Objects.Competition import Competition
 from Objects.Decathlon import Decathlon
+from Objects.Heptathlon import Heptathlon
 from Objects.Participant import Participant
 
 
@@ -37,7 +38,7 @@ def ajouter_perfomances(compet_chargee):
         ]
     else:  # Femme
         nom_epreuves = [
-            "1OOm H(s)",
+            "1OOm Haies(s)",
             "Hauteur (m)",
             "Poids (m)",
             "200m (s)",
@@ -65,12 +66,24 @@ def ajouter_perfomances(compet_chargee):
     confirm_choix = add_confirmation.show()
 
     if confirm_choix == 0:
-        compet_chargee.add_participation(
-            Decathlon(
-                performances,
-                Participant(nom_athlete, prenom_athlete, int(sexe_athle), nation_athle),
+        if sexe_athle == 1:
+            compet_chargee.add_participation(
+                Decathlon(
+                    performances,
+                    Participant(
+                        nom_athlete, prenom_athlete, int(sexe_athle), nation_athle
+                    ),
+                )
             )
-        )
+        else:
+            compet_chargee.add_participation(
+                Heptathlon(
+                    performances,
+                    Participant(
+                        nom_athlete, prenom_athlete, int(sexe_athle), nation_athle
+                    ),
+                )
+            )
         print("Athlète ajouté(e) avec succès")
 
     else:
