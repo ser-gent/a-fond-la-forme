@@ -34,6 +34,9 @@ L'heptathlon est une épreuve combinée d'athlétisme se disputant à l'extérie
 
 Le record du monde actuel est détenu par l'américaine [Jackie Joyner-Kersee](hhttps://fr.wikipedia.org/wiki/Jackie_Joyner-Kersee) avec 7 291 points, lors des Jeux Olympiques de Séoul en 1988 (ndlr : des soupçons de dopage sont liés à ce record).
 
+## Diagramme de classe
+![Diagramme de classe](.github/images/classChart.png)
+
 ## Configuration requise
 - Sytème de la famille UNIX (Windows non supporté)
 - [Python 3.9](https://www.python.org/downloads/) minimun
@@ -49,6 +52,11 @@ Pour installer les compétitions pré-installées, il faut créer un dossier *st
 mkdir storage
 python data.py
 ```
+
+## Fichiers de lancement
+Pour lancer le menu interactif, il faut lancer le script *menu.py*.
+
+Deux autres fichiers de lancement, *main.py* et *main2.py*, sont présents également. Il s'agit de 2 scripts utilisant le système de classe.
 
 ## Formatage
 Formatage des fichiers avec *[Black](https://pypi.org/project/black/)*
